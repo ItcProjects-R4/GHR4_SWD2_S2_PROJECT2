@@ -1,0 +1,227 @@
+/* ============================================
+   SonicAI CategoryCard - Modern Design
+   ============================================ */
+
+.card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  min-height: 160px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-light);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  opacity: 0.05;
+}
+
+/* Icon */
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: rgba(124, 58, 237, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .iconWrapper {
+  background: var(--primary-gradient);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.iconWrapper i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.card:hover .iconWrapper i {
+  color: white;
+}
+
+/* Title */
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .title {
+  color: var(--primary);
+}
+
+/* Count */
+.count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover .count {
+  color: var(--text-secondary);
+}
+
+/* Arrow */
+.arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+  z-index: 1;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+  background: var(--primary-gradient);
+  color: white;
+}
+
+/* ============================================
+   Color Variants
+   ============================================ */
+
+.card[data-color="blue"] .iconWrapper {
+  background: rgba(59, 130, 246, 0.1);
+}
+.card[data-color="blue"] .iconWrapper i {
+  color: #3B82F6;
+}
+.card[data-color="blue"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+}
+
+.card[data-color="green"] .iconWrapper {
+  background: rgba(16, 185, 129, 0.1);
+}
+.card[data-color="green"] .iconWrapper i {
+  color: #10B981;
+}
+.card[data-color="green"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+}
+
+.card[data-color="orange"] .iconWrapper {
+  background: rgba(245, 158, 11, 0.1);
+}
+.card[data-color="orange"] .iconWrapper i {
+  color: #F59E0B;
+}
+.card[data-color="orange"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+}
+
+.card[data-color="red"] .iconWrapper {
+  background: rgba(239, 68, 68, 0.1);
+}
+.card[data-color="red"] .iconWrapper i {
+  color: #EF4444;
+}
+.card[data-color="red"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
+}
+
+.card[data-color="pink"] .iconWrapper {
+  background: rgba(236, 72, 153, 0.1);
+}
+.card[data-color="pink"] .iconWrapper i {
+  color: #EC4899;
+}
+.card[data-color="pink"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #EC4899 0%, #F472B6 100%);
+}
+
+.card[data-color="cyan"] .iconWrapper {
+  background: rgba(6, 182, 212, 0.1);
+}
+.card[data-color="cyan"] .iconWrapper i {
+  color: #06B6D4;
+}
+.card[data-color="cyan"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
+}
+
+.card[data-color="indigo"] .iconWrapper {
+  background: rgba(99, 102, 241, 0.1);
+}
+.card[data-color="indigo"] .iconWrapper i {
+  color: #6366F1;
+}
+.card[data-color="indigo"]:hover .iconWrapper {
+  background: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem 1rem;
+    min-height: 140px;
+  }
+
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconWrapper i {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
