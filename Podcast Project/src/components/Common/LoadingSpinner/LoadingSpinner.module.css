@@ -1,0 +1,178 @@
+/* ============================================
+   SonicAI LoadingSpinner - Modern Design
+   ============================================ */
+
+/* Base Spinner */
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.spinnerCircle {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Sizes */
+.spinnerSmall .spinnerCircle {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+}
+
+.spinnerLarge .spinnerCircle {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+/* Full Screen */
+.fullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  z-index: 9999;
+  gap: 1.5rem;
+}
+
+.fullScreen .spinnerCircle {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+.loadingText {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  animation: pulse 1.5s ease infinite;
+}
+
+/* Gradient Spinner */
+.gradientSpinner .spinnerCircle {
+  border: none;
+  background: conic-gradient(from 0deg, transparent 0%, var(--primary) 100%);
+  mask: radial-gradient(circle, transparent 60%, black 61%);
+  -webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
+}
+
+/* Pulse Spinner */
+.pulseSpinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  animation: pulseScale 1.5s ease infinite;
+}
+
+/* Dots Spinner */
+.dotsSpinner {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  animation: dotBounce 1.4s ease infinite;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-hover) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+.skeletonText {
+  height: 16px;
+  margin-bottom: 8px;
+  border-radius: var(--radius-sm);
+}
+
+.skeletonText:last-child {
+  width: 80%;
+}
+
+.skeletonImage {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.skeletonCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

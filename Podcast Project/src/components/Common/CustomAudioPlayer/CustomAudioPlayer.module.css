@@ -1,0 +1,432 @@
+/* ============================================
+   SonicAI Custom Audio Player CSS
+   ============================================ */
+
+.playerContainer {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effects */
+.playerContainer:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+
+/* ============================================
+   Meta Information (Titles)
+   ============================================ */
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.75rem;
+}
+
+.episodeTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.podcastTitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Controls Layout Row
+   ============================================ */
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Buttons group */
+.buttonsGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.controlButton {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.controlButton:hover {
+  color: var(--primary);
+  border-color: var(--primary-light);
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+}
+
+.skipLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+/* Play/Pause Button */
+.playPauseButton {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+  font-size: 1.25rem;
+}
+
+.playPauseButton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.5);
+  filter: brightness(1.05);
+}
+
+.playPauseButton:active {
+  transform: scale(0.95);
+}
+
+/* ============================================
+   Volume Styling
+   ============================================ */
+
+.volumeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 130px;
+  justify-content: flex-end;
+}
+
+.volumeButton {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.volumeButton:hover {
+  color: var(--primary);
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary) var(--vol-pct, 100%), var(--border-light) var(--vol-pct, 100%), var(--border-light) 100%);
+  outline: none;
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+.volumeSlider:hover {
+  height: 6px;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  border: 1.5px solid var(--bg-card);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease;
+}
+
+.volumeSlider:hover::-webkit-slider-thumb {
+  transform: scale(1.25);
+}
+
+/* ============================================
+   Playback Speed Controls
+   ============================================ */
+
+.speedWrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 60px;
+  text-align: left;
+}
+
+.pillButton {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.pillButton:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+  background: var(--bg-hover);
+}
+
+.speedDropdown {
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 100;
+  min-width: 75px;
+  animation: slideUp 0.25s ease;
+}
+
+.speedOption {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.speedOption:hover {
+  background: var(--bg-hover);
+  color: var(--primary);
+}
+
+.speedOptionActive {
+  background: var(--primary-gradient);
+  color: white !important;
+}
+
+/* ============================================
+   Timeline / Progress Range Slider
+   ============================================ */
+
+.timelineRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 45px;
+  text-align: center;
+}
+
+.progressContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.progressSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+/* Invisible default track so custom track and fill work */
+.progressSlider::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 6px;
+}
+
+.progressSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--bg-card);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: -4px;
+}
+
+.progressSlider:hover::-webkit-slider-thumb {
+  transform: scale(1.3);
+  background: var(--primary-light);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+}
+
+/* Custom background track & fill overlay (extremely smooth) */
+.progressContainer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--border-light);
+  border-radius: var(--radius-full);
+  z-index: 1;
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  height: 6px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-full);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ============================================
+   Minimal Layout (for EpisodeCards)
+   ============================================ */
+
+.minimalPlayer {
+  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+.minimalPlayer .controlsRow {
+  gap: 1rem;
+}
+
+.minimalPlayer .playPauseButton {
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+}
+
+.minimalPlayer .controlButton {
+  width: 32px;
+  height: 32px;
+  font-size: 0.85rem;
+}
+
+.minimalPlayer .skipLabel {
+  font-size: 0.55rem;
+}
+
+.minimalPlayer .volumeWrapper {
+  min-width: 100px;
+}
+
+.minimalPlayer .volumeSlider {
+  width: 60px;
+}
+
+/* ============================================
+   Animations & Keyframes
+   ============================================ */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .controlsRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .volumeWrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  .speedWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .speedDropdown {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 125%;
+  }
+}
