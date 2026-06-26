@@ -1,0 +1,385 @@
+<svg width="1400" height="2100" viewBox="0 0 1400 2100" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#3b6abf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="2100" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="700" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1a1a2e">Podcast Platform System — Use Case Diagram</text>
+
+  <!-- SYSTEM BOUNDARY -->
+  <rect x="290" y="55" width="970" height="1990" rx="14" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="10 5"/>
+  <rect x="560" y="44" width="280" height="24" fill="#ffffff"/>
+  <text x="700" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155">«system boundary»</text>
+
+  <!-- ══════════════ ACTOR: Guest User ══════════════ -->
+  <g id="guest">
+    <circle cx="120" cy="230" r="22" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="252" x2="120" y2="320" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="72" y1="278" x2="168" y2="278" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="320" x2="82" y2="365" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="320" x2="158" y2="365" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="120" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">«actor»</text>
+    <text x="120" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">Guest User</text>
+  </g>
+
+  <!-- ══════════════ ACTOR: Registered User ══════════════ -->
+  <g id="reguser">
+    <circle cx="120" cy="1080" r="22" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="1102" x2="120" y2="1170" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="72" y1="1128" x2="168" y2="1128" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="1170" x2="82" y2="1215" stroke="#1e3a5f" stroke-width="2"/>
+    <line x1="120" y1="1170" x2="158" y2="1215" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="120" y="1240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">«actor»</text>
+    <text x="120" y="1257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a5f">Registered User</text>
+  </g>
+
+  <!-- ══════════════ SECONDARY ACTORS (right) ══════════════ -->
+  <!-- iTunes API -->
+  <g id="itunes">
+    <circle cx="1318" cy="555" r="22" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <line x1="1318" y1="577" x2="1318" y2="645" stroke="#888" stroke-width="1.5"/>
+    <line x1="1270" y1="603" x2="1366" y2="603" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="645" x2="1280" y2="690" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="645" x2="1356" y2="690" stroke="#888" stroke-width="1.5"/>
+    <text x="1318" y="712" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">«secondary»</text>
+    <text x="1318" y="728" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#666">iTunes API</text>
+  </g>
+
+  <!-- localStorage -->
+  <g id="localstorage">
+    <circle cx="1318" cy="930" r="22" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <line x1="1318" y1="952" x2="1318" y2="1020" stroke="#888" stroke-width="1.5"/>
+    <line x1="1270" y1="978" x2="1366" y2="978" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="1020" x2="1280" y2="1065" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="1020" x2="1356" y2="1065" stroke="#888" stroke-width="1.5"/>
+    <text x="1318" y="1087" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">«secondary»</text>
+    <text x="1318" y="1103" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#666">localStorage</text>
+  </g>
+
+  <!-- Gemini AI -->
+  <g id="gemini">
+    <circle cx="1318" cy="1290" r="22" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <line x1="1318" y1="1312" x2="1318" y2="1380" stroke="#888" stroke-width="1.5"/>
+    <line x1="1270" y1="1338" x2="1366" y2="1338" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="1380" x2="1280" y2="1425" stroke="#888" stroke-width="1.5"/>
+    <line x1="1318" y1="1380" x2="1356" y2="1425" stroke="#888" stroke-width="1.5"/>
+    <text x="1318" y="1447" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">«secondary»</text>
+    <text x="1318" y="1463" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#666">Gemini AI</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 1 — AUTHENTICATION
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="75" width="938" height="255" rx="8" fill="#f0f4ff" stroke="#6b7cbb" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7cbb">«module»</text>
+  <text x="775" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3b4a8c">Authentication Module</text>
+
+  <!-- UC-AUTH-01 Register -->
+  <ellipse cx="470" cy="195" rx="100" ry="34" fill="#ffffff" stroke="#3b4a8c" stroke-width="1.5"/>
+  <text x="470" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7cbb">UC-AUTH-01</text>
+  <text x="470" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Register</text>
+
+  <!-- UC-AUTH-02 Login -->
+  <ellipse cx="775" cy="195" rx="100" ry="34" fill="#ffffff" stroke="#3b4a8c" stroke-width="1.5"/>
+  <text x="775" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7cbb">UC-AUTH-02</text>
+  <text x="775" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Login</text>
+
+  <!-- UC-AUTH-03 Logout -->
+  <ellipse cx="1085" cy="195" rx="100" ry="34" fill="#ffffff" stroke="#3b4a8c" stroke-width="1.5"/>
+  <text x="1085" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7cbb">UC-AUTH-03</text>
+  <text x="1085" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Logout</text>
+
+  <!-- Include: Register → Validate Email -->
+  <ellipse cx="470" cy="293" rx="108" ry="30" fill="#e8f0fe" stroke="#3b6abf" stroke-width="1.2"/>
+  <text x="470" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3b6abf">«include»</text>
+  <text x="470" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a5f">Validate Email Uniqueness</text>
+  <line x1="470" y1="229" x2="470" y2="263" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Include: Login → Validate Credentials -->
+  <ellipse cx="775" cy="293" rx="108" ry="30" fill="#e8f0fe" stroke="#3b6abf" stroke-width="1.2"/>
+  <text x="775" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3b6abf">«include»</text>
+  <text x="775" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a5f">Validate Credentials</text>
+  <line x1="775" y1="229" x2="775" y2="263" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Guest → Auth UCs -->
+  <line x1="168" y1="258" x2="370" y2="200" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="265" x2="675" y2="202" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="272" x2="985" y2="200" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 2 — DISCOVERY
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="348" width="938" height="255" rx="8" fill="#f0fff8" stroke="#2d7a5a" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="369" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2d7a5a">«module»</text>
+  <text x="775" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a4a35">Discovery Module</text>
+
+  <!-- UC-DISC-01 -->
+  <ellipse cx="470" cy="467" rx="105" ry="34" fill="#ffffff" stroke="#2d7a5a" stroke-width="1.5"/>
+  <text x="470" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2d7a5a">UC-DISC-01</text>
+  <text x="470" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Browse Podcasts</text>
+
+  <!-- UC-DISC-02 -->
+  <ellipse cx="775" cy="467" rx="105" ry="34" fill="#ffffff" stroke="#2d7a5a" stroke-width="1.5"/>
+  <text x="775" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2d7a5a">UC-DISC-02</text>
+  <text x="775" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Search Podcasts</text>
+
+  <!-- UC-DISC-03 -->
+  <ellipse cx="1085" cy="467" rx="105" ry="34" fill="#ffffff" stroke="#2d7a5a" stroke-width="1.5"/>
+  <text x="1085" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2d7a5a">UC-DISC-03</text>
+  <text x="1085" y="477" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">View Podcast Details</text>
+
+  <!-- Include: all → Fetch iTunes -->
+  <ellipse cx="775" cy="565" rx="120" ry="30" fill="#d4f5e9" stroke="#2d7a5a" stroke-width="1.2"/>
+  <text x="775" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2d7a5a">«include»</text>
+  <text x="775" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1a4a35">Fetch from iTunes API</text>
+  <line x1="470" y1="501" x2="675" y2="552" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="775" y1="501" x2="775" y2="535" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="1085" y1="501" x2="875" y2="552" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Guest → Discovery -->
+  <line x1="168" y1="278" x2="365" y2="460" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="282" x2="670" y2="468" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="286" x2="980" y2="472" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- iTunes → Fetch iTunes -->
+  <line x1="1262" y1="575" x2="895" y2="568" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 3 — PLAYBACK
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="622" width="938" height="238" rx="8" fill="#fff8f0" stroke="#a0522d" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="643" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a0522d">«module»</text>
+  <text x="775" y="659" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#5c2d0a">Playback Module</text>
+
+  <!-- UC-PLAY-01 -->
+  <ellipse cx="470" cy="738" rx="100" ry="34" fill="#ffffff" stroke="#a0522d" stroke-width="1.5"/>
+  <text x="470" y="733" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0522d">UC-PLAY-01</text>
+  <text x="470" y="748" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Play Podcast</text>
+
+  <!-- UC-PLAY-02 -->
+  <ellipse cx="775" cy="738" rx="100" ry="34" fill="#ffffff" stroke="#a0522d" stroke-width="1.5"/>
+  <text x="775" y="733" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0522d">UC-PLAY-02</text>
+  <text x="775" y="748" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Pause Playback</text>
+
+  <!-- UC-PLAY-03 -->
+  <ellipse cx="1085" cy="738" rx="100" ry="34" fill="#ffffff" stroke="#a0522d" stroke-width="1.5"/>
+  <text x="1085" y="733" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0522d">UC-PLAY-03</text>
+  <text x="1085" y="748" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Seek Audio</text>
+
+  <!-- Include: Play → Load Audio -->
+  <ellipse cx="470" cy="828" rx="108" ry="28" fill="#ffe8d6" stroke="#a0522d" stroke-width="1.2"/>
+  <text x="470" y="823" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0522d">«include»</text>
+  <text x="470" y="838" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#5c2d0a">Load Audio Source</text>
+  <line x1="470" y1="772" x2="470" y2="800" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Guest → Playback -->
+  <line x1="168" y1="290" x2="370" y2="732" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="294" x2="675" y2="738" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="298" x2="985" y2="742" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 4 — FAVORITES
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="880" width="938" height="238" rx="8" fill="#fff0f5" stroke="#a0296a" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="901" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a0296a">«module»</text>
+  <text x="775" y="917" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6a1040">Favorites Module</text>
+
+  <!-- UC-FAV-01 -->
+  <ellipse cx="470" cy="998" rx="105" ry="34" fill="#ffffff" stroke="#a0296a" stroke-width="1.5"/>
+  <text x="470" y="993" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0296a">UC-FAV-01</text>
+  <text x="470" y="1008" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Add to Favorites</text>
+
+  <!-- UC-FAV-02 -->
+  <ellipse cx="775" cy="998" rx="118" ry="34" fill="#ffffff" stroke="#a0296a" stroke-width="1.5"/>
+  <text x="775" y="993" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0296a">UC-FAV-02</text>
+  <text x="775" y="1008" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Remove from Favorites</text>
+
+  <!-- UC-FAV-03 -->
+  <ellipse cx="1085" cy="998" rx="105" ry="34" fill="#ffffff" stroke="#a0296a" stroke-width="1.5"/>
+  <text x="1085" y="993" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0296a">UC-FAV-03</text>
+  <text x="1085" y="1008" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">View Favorites</text>
+
+  <!-- Include: Add/Remove → Persist localStorage -->
+  <ellipse cx="622" cy="1090" rx="125" ry="30" fill="#ffd6e7" stroke="#a0296a" stroke-width="1.2"/>
+  <text x="622" y="1085" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a0296a">«include»</text>
+  <text x="622" y="1100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6a1040">Persist to localStorage</text>
+  <line x1="470" y1="1032" x2="560" y2="1060" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="775" y1="1032" x2="700" y2="1060" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Registered → Favorites -->
+  <line x1="168" y1="1108" x2="365" y2="1000" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1112" x2="657" y2="1002" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1116" x2="980" y2="1004" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- localStorage → Persist -->
+  <line x1="1262" y1="985" x2="747" y2="1090" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 5 — AI SUMMARY
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="1138" width="938" height="245" rx="8" fill="#f5f0ff" stroke="#5b3aa0" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="1159" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b3aa0">«module»</text>
+  <text x="775" y="1175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3a1f6e">AI Summary Module</text>
+
+  <!-- UC-AI-01 -->
+  <ellipse cx="540" cy="1252" rx="118" ry="34" fill="#ffffff" stroke="#5b3aa0" stroke-width="1.5"/>
+  <text x="540" y="1247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5b3aa0">UC-AI-01</text>
+  <text x="540" y="1262" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Generate AI Summary</text>
+
+  <!-- UC-AI-02 -->
+  <ellipse cx="940" cy="1252" rx="110" ry="34" fill="#ffffff" stroke="#5b3aa0" stroke-width="1.5"/>
+  <text x="940" y="1247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5b3aa0">UC-AI-02</text>
+  <text x="940" y="1262" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">View AI Summary</text>
+
+  <!-- Include: Generate → Build Prompt -->
+  <ellipse cx="540" cy="1342" rx="100" ry="28" fill="#e8e0ff" stroke="#5b3aa0" stroke-width="1.2"/>
+  <text x="540" y="1337" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5b3aa0">«include»</text>
+  <text x="540" y="1352" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#3a1f6e">Build Prompt</text>
+  <line x1="540" y1="1286" x2="540" y2="1314" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Include: Build Prompt → Call Gemini -->
+  <ellipse cx="540" cy="1367" rx="108" ry="0"/>
+  <!-- arrow continues down from Build Prompt label to show chain, placed at bottom -->
+
+  <!-- Registered → AI -->
+  <line x1="168" y1="1120" x2="422" y2="1254" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1124" x2="830" y2="1256" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Gemini → Build Prompt -->
+  <line x1="1262" y1="1350" x2="640" y2="1345" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 6 — ANALYTICS
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="1402" width="938" height="295" rx="8" fill="#f0f8ff" stroke="#1a6b9a" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="1423" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1a6b9a">«module»</text>
+  <text x="775" y="1439" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0d3d5e">Analytics Module</text>
+
+  <!-- UC-ANALYTICS-01 -->
+  <ellipse cx="400" cy="1510" rx="88" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="400" y="1505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-ANALYTICS-01</text>
+  <text x="400" y="1520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">View Dashboard</text>
+
+  <!-- UC-ANALYTICS-02 -->
+  <ellipse cx="620" cy="1510" rx="88" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="620" y="1505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-ANALYTICS-02</text>
+  <text x="620" y="1520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">Listening History</text>
+
+  <!-- UC-ANALYTICS-03 -->
+  <ellipse cx="840" cy="1510" rx="88" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="840" y="1505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-ANALYTICS-03</text>
+  <text x="840" y="1520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">Listen Statistics</text>
+
+  <!-- UC-PERS-03 Recommendations -->
+  <ellipse cx="1075" cy="1510" rx="95" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="1075" y="1505" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-PERS-03</text>
+  <text x="1075" y="1520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">Recommendations</text>
+
+  <!-- UC-ANALYTICS-05 -->
+  <ellipse cx="500" cy="1610" rx="108" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="500" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-ANALYTICS-05</text>
+  <text x="500" y="1620" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">Personalized Insights</text>
+
+  <!-- UC-ANALYTICS-06 -->
+  <ellipse cx="840" cy="1610" rx="100" ry="30" fill="#ffffff" stroke="#1a6b9a" stroke-width="1.5"/>
+  <text x="840" y="1605" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1a6b9a">UC-ANALYTICS-06</text>
+  <text x="840" y="1620" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e">View Activity Feed</text>
+
+  <!-- Include: → Analyze Listening Behavior -->
+  <ellipse cx="700" cy="1672" rx="130" ry="28" fill="#cce8ff" stroke="#1a6b9a" stroke-width="1.2"/>
+  <text x="700" y="1667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1a6b9a">«include»</text>
+  <text x="700" y="1682" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0d3d5e">Analyze Listening Behavior</text>
+  <line x1="400" y1="1540" x2="600" y2="1654" stroke="#3b6abf" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="620" y1="1540" x2="665" y2="1644" stroke="#3b6abf" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="840" y1="1540" x2="760" y2="1644" stroke="#3b6abf" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="1075" y1="1540" x2="820" y2="1656" stroke="#3b6abf" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="500" y1="1640" x2="600" y2="1662" stroke="#3b6abf" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Registered → Analytics -->
+  <line x1="168" y1="1128" x2="312" y2="1508" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1132" x2="532" y2="1512" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1136" x2="752" y2="1514" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1140" x2="980" y2="1514" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 7 — PERSONALIZATION
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="1718" width="938" height="180" rx="8" fill="#fffdf0" stroke="#8a7a00" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="1739" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8a7a00">«module»</text>
+  <text x="775" y="1755" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a4200">Personalization Module</text>
+
+  <!-- UC-PERS-01 -->
+  <ellipse cx="540" cy="1840" rx="100" ry="34" fill="#ffffff" stroke="#8a7a00" stroke-width="1.5"/>
+  <text x="540" y="1835" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a7a00">UC-PERS-01</text>
+  <text x="540" y="1850" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Toggle Theme</text>
+
+  <!-- UC-PERS-02 -->
+  <ellipse cx="940" cy="1840" rx="118" ry="34" fill="#ffffff" stroke="#8a7a00" stroke-width="1.5"/>
+  <text x="940" y="1835" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a7a00">UC-PERS-02</text>
+  <text x="940" y="1850" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">System Theme Detection</text>
+
+  <!-- Registered → Personalization -->
+  <line x1="168" y1="1144" x2="440" y2="1842" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1148" x2="822" y2="1844" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODULE 8 — ADMINISTRATION
+  ══════════════════════════════════════════════════════ -->
+  <rect x="306" y="1918" width="938" height="210" rx="8" fill="#fff5f5" stroke="#8a1a1a" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="775" y="1939" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8a1a1a">«module»</text>
+  <text x="775" y="1955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a0808">Administration Module</text>
+
+  <!-- UC-ADMIN-01 -->
+  <ellipse cx="470" cy="2012" rx="105" ry="32" fill="#ffffff" stroke="#8a1a1a" stroke-width="1.5"/>
+  <text x="470" y="2007" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a1a1a">UC-ADMIN-01</text>
+  <text x="470" y="2022" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Manage Podcasts</text>
+
+  <!-- UC-ADMIN-02 -->
+  <ellipse cx="775" cy="2012" rx="105" ry="32" fill="#ffffff" stroke="#8a1a1a" stroke-width="1.5"/>
+  <text x="775" y="2007" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a1a1a">UC-ADMIN-02</text>
+  <text x="775" y="2022" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">Manage Users</text>
+
+  <!-- UC-ADMIN-03 -->
+  <ellipse cx="1085" cy="2012" rx="105" ry="32" fill="#ffffff" stroke="#8a1a1a" stroke-width="1.5"/>
+  <text x="1085" y="2007" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a1a1a">UC-ADMIN-03</text>
+  <text x="1085" y="2022" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e">View System Analytics</text>
+
+  <!-- Include: Admin UCs → Validate Admin Role -->
+  <ellipse cx="775" cy="2095" rx="115" ry="28" fill="#ffdddd" stroke="#8a1a1a" stroke-width="1.2"/>
+  <text x="775" y="2090" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8a1a1a">«include»</text>
+  <text x="775" y="2105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4a0808">Validate Admin Role</text>
+  <line x1="470" y1="2044" x2="682" y2="2076" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="775" y1="2044" x2="775" y2="2067" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <line x1="1085" y1="2044" x2="868" y2="2076" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+
+  <!-- Registered → Admin -->
+  <line x1="168" y1="1152" x2="365" y2="2010" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1156" x2="670" y2="2014" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="1160" x2="980" y2="2016" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       LEGEND
+  ══════════════════════════════════════════════════════ -->
+  <rect x="308" y="1921" width="340" height="200" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="322" y="1942" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Legend</text>
+  <line x1="308" y1="1950" x2="648" y2="1950" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="322" y1="1970" x2="370" y2="1970" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="378" y="1974" font-family="Arial, sans-serif" font-size="11" fill="#555">Actor association</text>
+  <line x1="322" y1="1995" x2="370" y2="1995" stroke="#3b6abf" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow2)"/>
+  <text x="378" y="1999" font-family="Arial, sans-serif" font-size="11" fill="#555">«include» relationship</text>
+  <line x1="322" y1="2020" x2="370" y2="2020" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="378" y="2024" font-family="Arial, sans-serif" font-size="11" fill="#555">Secondary actor link</text>
+  <ellipse cx="345" cy="2048" rx="22" ry="12" fill="#e8f0fe" stroke="#3b6abf" stroke-width="1"/>
+  <text x="378" y="2052" font-family="Arial, sans-serif" font-size="11" fill="#555">«include» sub-case</text>
+  <ellipse cx="345" cy="2075" rx="22" ry="12" fill="#fff" stroke="#555" stroke-width="1.5"/>
+  <text x="378" y="2079" font-family="Arial, sans-serif" font-size="11" fill="#555">Primary use case</text>
+
+</svg>
